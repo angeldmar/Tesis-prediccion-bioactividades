@@ -40,7 +40,9 @@ Si alguno de los paquetes de R ha sido retirado de los repositorios de CRAN, se 
 
 ## Funcionamiento de los archivos del repositorio
 
-Los descriptores se calcularon en los archivos `.py ` utilizando las moléculas que se encuentran en `SMILES.csv`. Los resultados se encuentran guardados en el directorio `DescriptorsCSV`. El código con el que se entrenó y validó los modelos se encuentra en los archivos `.R` identificados según su bioactividad. Es importante considerar que toman como entrada los archivos CSV que se encuentran en el directorio `DescriptorsCSV` (con los descriptores moleculares) y en el directorio `target` (con los vectores objetivos de cada bioactividad).
+Los descriptores se calcularon en los archivos `.py ` utilizando las moléculas que se encuentran en `SMILES.csv`. Los resultados de los descriptores se encuentran guardados en el directorio `DescriptorsCSV`. 
+
+El código con el que se entrenó y validó los modelos se encuentra en los archivos `.R` identificados según su bioactividad. Es importante considerar que tomaron como entrada los archivos CSV que se encuentran en el directorio `DescriptorsCSV` (con los descriptores moleculares) y en el directorio `target` (con los vectores objetivos de cada bioactividad). La salida de datos de los modelos se guardo en los archivos en los archivos `.txt` que tienen como prefijo `output`.
 
 Cada archivo `.R` de los modelos genera 3 objetos de R guardados en los archivos `.rds`. Los archivos que inician con `modelo` contienen el modelo final generado, los que empiezan con `predictores_filtrados` contienen las variables elegidas por ingeniería de características, y los que inician con `trained_recipe` contienen la receta del paquete `recipe` para el preprocesamiento de los datos con centrado y escalado.
 
