@@ -1,6 +1,6 @@
 # Modelos utilizados en la aplicación web *mlbiopredict*
 
-En este repositorio se encuentra el código utilizado para desarrollar los modelos del seminario de investigación **"Desarrollo de una herramienta web para la prediccion de la actividad biologica de estructuras moleculares empleando *machine learning*"**
+En este repositorio se encuentra el código utilizado para desarrollar los modelos del seminario de investigación **"Desarrollo de una herramienta web para la prediccion de la actividad biologica de estructuras moleculares empleando *machine learning*"**. La página web en la que se desplegaron los modelos se encuentra disponible en este [enlace](https://mlbiopredict.com).
 
 ## Instalación
 
@@ -38,7 +38,7 @@ La lista de paquetes utilizados y sus versiones en Python se pueden leer en el d
 Si alguno de los paquetes de R ha sido retirado de los repositorios de CRAN, se puede compilar desde su código fuente en GitHub utilizando los paquetes `remotes` o `devtools`.
 
 
-## Funcionamiento de los archivos del repositorio
+## Descripción de los archivos del repositorio
 
 Los descriptores se calcularon en los archivos `.py ` utilizando las moléculas que se encuentran en `SMILES.csv`. Los resultados de los descriptores se encuentran guardados en el directorio `DescriptorsCSV`. 
 
@@ -46,4 +46,4 @@ El código con el que se entrenó y validó los modelos se encuentra en los arch
 
 Cada archivo `.R` de los modelos genera 3 objetos de R guardados en los archivos `.rds`. Los archivos que inician con `modelo` contienen el modelo final generado, los que empiezan con `predictores_filtrados` contienen las variables elegidas por ingeniería de características, y los que inician con `trained_recipe` contienen la receta del paquete `recipe` para el preprocesamiento de los datos con centrado y escalado.
 
-Estos objetos usaron las iniciales de la bioactividad como nomenclatura, siendo `ac` para anticancerígenos, `ad` para antidiabéticos, `ai` para antiinflamatorios, `am` para antimicrobianos y `ao` para antioxidantes.
+Estos objetos y las salidas de datos usaron las iniciales de la bioactividad como nomenclatura de sufijos, siendo `ac` para anticancerígenos, `ad` para antidiabéticos, `ai` para antiinflamatorios, `am` para antimicrobianos y `ao` para antioxidantes.
